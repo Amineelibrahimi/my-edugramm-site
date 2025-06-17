@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organigramme du Couvoir</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            padding: 40px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .organigramme {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .niveau {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            width: 100%;
+        }
+        
+        .poste {
+            background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+            border: 2px solid #dee2e6;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            min-width: 200px;
+            max-width: 300px;
+        }
+        
+        .poste:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            border-color: #007bff;
+        }
+        
+        .direction {
+            background: linear-gradient(145deg, #4CAF50, #45a049);
+            color: white;
+            border-color: #4CAF50;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+        .responsable {
+            background: linear-gradient(145deg, #2196F3, #1976D2);
+            color: white;
+            border-color: #2196F3;
+        }
+        
+        .metier {
+            background: linear-gradient(145deg, #FF9800, #F57C00);
+            color: white;
+            border-color: #FF9800;
+            min-width: 250px;
+        }
+        
+        .titre-poste {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .employes {
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+        
+        .employe {
+            display: block;
+            margin: 5px 0;
+            padding: 5px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 8px;
+        }
+        
+        .responsable-equipe {
+            display: block;
+            margin: 5px 0;
+            padding: 8px;
+            background: rgba(255,255,255,0.4);
+            border-radius: 8px;
+            font-weight: bold;
+            border-left: 4px solid rgba(255,255,255,0.8);
+        }
+        
+        .niveau-titre {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 30px 0 20px 0;
+            text-align: center;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .connexion {
+            width: 2px;
+            height: 20px;
+            background: #6c757d;
+            margin: 0 auto;
+        }
+        
+        .section-metiers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            width: 100%;
+            max-width: 1400px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .section-metiers {
+                grid-template-columns: 1fr;
+            }
+            
+            .poste {
+                min-width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🐣 ORGANIGRAMME DU COUVOIR 🐣</h1>
+        
+        <div class="organigramme">
+            <!-- Direction -->
+            <div class="niveau">
+                <div class="poste direction">
+                    <div class="titre-poste">Chef Couvoir</div>
+                    <div class="employes">
+                        <span class="employe">El Ibrahim Mohamed</span>
+                        <div style="margin-top: 10px; font-size: 0.85em; font-style: italic;">
+                            Remplaçant: Issdar Boubker
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="connexion"></div>
+            
+            <!-- Responsables des Grandes Unités -->
+            <div class="niveau-titre">RESPONSABLES</div>
+            <div class="niveau">
+                <div class="poste responsable">
+                    <div class="titre-poste">Maintenance</div>
+                    <div class="employes">
+                        <span class="employe">Arfi Abdelghani (Technicien)</span>
+                        <div style="margin-top: 8px; font-size: 0.85em; font-style: italic;">
+                            Aide Technicien: Lafzaini Youssef
+                        </div>
+                        <span class="employe">Abid Abdelhadi (Plombier)</span>
+                    </div>
+                </div>
+                
+                <div class="poste responsable">
+                    <div class="titre-poste">Responsable Triage des Œufs</div>
+                    <div class="employes">
+                        <span class="employe">Amal Abdelhak</span>
+                        <div style="margin-top: 8px; font-size: 0.85em; font-style: italic;">
+                            Remplaçant: Amer El Mahdi
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="poste responsable">
+                    <div class="titre-poste">Responsable Triage des Poussins</div>
+                    <div class="employes">
+                        <span class="employe">Issdar Boubker</span>
+                        <div style="margin-top: 5px; font-size: 0.8em; color: rgba(255,255,255,0.8);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="connexion"></div>
+            
+            <!-- Métiers et Fonctions -->
+            <div class="niveau-titre">MÉTIERS ET FONCTIONS</div>
+            <div class="section-metiers">
+                <div class="poste metier">
+                    <div class="titre-poste">Triage des Poussins</div>
+                    <div class="employes">
+                        <span class="responsable-equipe">Issdar Boubker (Responsable)</span>
+                        <span class="employe">ES-SAHIH ABDELALI</span>
+                        <span class="employe">MZILI AHMED</span>
+                        <span class="employe">BOUTLA ISMAIL</span>
+                        <span class="employe">MAAYOUF LAHOUCINE</span>
+                        <span class="employe">ABDELKAMAL KAMAL</span>
+                        <span class="employe">AKDIM RACHID</span>
+                        <span class="employe">NASR HASSAN</span>
+                    </div>
+                </div>                
+                <div class="poste metier">
+                    <div class="titre-poste">Triage des Œufs</div>
+                    <div class="employes">
+                        <span class="responsable-equipe">Amal Abdelhak (Responsable)</span>
+                        <span class="employe">Amer El Mahdi (remplaçant)</span>
+                        <span class="employe">ABDELAKAMAL MEHDI</span>
+                        <span class="employe">SAMAME MOHAMED</span>
+                        <span class="employe">CHARFAOUI KHALID</span>
+                        <span class="employe">SABER ABDELILAH</span>
+                    </div>
+                </div>
+                
+                <div class="poste metier">
+                    <div class="titre-poste">Vaccination</div>
+                    <div class="employes">
+                        <span class="responsable-equipe">Brahim Lkhssim (Responsable)</span>
+                        <span class="employe">Said Lakhtairy</span>
+                        <span class="employe">Saber Yassine</span>
+                        <span class="employe">Arfi Abderrahim</span>
+                        <span class="employe">Bouchaib Diane</span>
+                        <span class="employe">Akharaz Larbi</span>
+                        <span class="employe">Charafi Noureddine</span>
+                        <span class="employe">El Gzouli Hamza</span>
+                        <span class="employe">Chabiba Abdelhadi</span>
+                        <span class="employe">Rachid Diane</span>
+                        <span class="employe">Chabiba Abderrahim</span>
+                        <span class="employe">Chahid Mohamed</span>
+                    </div>
+                </div>
+                
+                <div class="poste metier">
+                    <div class="titre-poste">Sécurité</div>
+                    <div class="employes">
+                        <span class="employe">Meskin Ahmed (Nuit)</span>
+                        <span class="employe">Hmaad Boyjaa (Jour)</span>
+                    </div>
+                </div>
+                
+                <div class="poste metier">
+                    <div class="titre-poste">Nettoyage de Machine</div>
+                    <div class="employes">
+                        <span class="employe">Adil ABDELAATI</span>
+                        <span class="employe">Karim Oubouja</span>
+                    </div>
+                </div>
+                
+                <div class="poste metier">
+                    <div class="titre-poste">Coquilles d'Œufs</div>
+                    <div class="employes">
+                        <span class="employe">El Azizi Nabil</span>
+                    </div>
+                </div>
+                
+                <div class="poste metier">
+                    <div class="titre-poste">Nettoyage des Caisses de Closoir</div>
+                    <div class="employes">
+                        <span class="employe">Salahddine El Mohammadi</span>
+                        <span class="employe">Abd Idblihi</span>
+                        <span class="employe">Lafzaini Mustapha</span>
+                    </div>
+                </div>
+                
+                <div class="poste metier">
+                    <div class="titre-poste">Personnels de Machine</div>
+                    <div class="employes">
+                        <span class="employe">Bakir Hassan</span>
+                        <span class="employe">Eddahbi Yousef</span>
+                        <span class="employe">Lafdouli Mohamed</span>
+                        <span class="employe">Faiz Mohamed</span>
+                        <span class="employe">Nasr Mohamed</span>
+                        <span class="employe">Nasr Anas</span>
+                        <span class="employe">Noureddine Skafi (Réserve)</span>
+                        <span class="employe">El Habti El Mahdi (Réserve)</span>
+                        <span class="employe">Boughazroun Abdellah (Réserve)</span>
+                    </div>
+                </div>
+                
+                <div class="poste metier">
+                    <div class="titre-poste">Transfert</div>
+                    <div class="employes">
+                        <span class="employe">Ilyass Naoum</span>
+                        <span class="employe">Ibn El Oualid Rachid</span>
+                        <span class="employe">Ibn El Oualid El Houcine</span>
+                        <span class="employe">Ibn El Oualid Bouchib</span>
+                        <span class="employe">Essalhi Elmostapha</span>
+                    </div>
+                </div>
+                
+                <div class="poste metier">
+                    <div class="titre-poste">Dépôt</div>
+                    <div class="employes">
+                        <span class="employe">Hassan Bouhrouj</span>
+                        <span class="employe">Lafdouli Anouar</span>
+                        <span class="employe">Ibn El Oualid Mohamed</span>
+                    </div>
+                </div>
+                                <div class="poste metier">
+                    <div class="titre-poste">Reserves congés</div>
+                    <div class="employes">
+                        <span class="employe">Personne 1</span>
+                        <span class="employe">Personne 2</span>
+                        <span class="employe">Personne 3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
